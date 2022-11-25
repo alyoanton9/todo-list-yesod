@@ -38,11 +38,16 @@ library:
   dependencies:
   - aeson
   - http-types
+  - katip
+  - monad-logger
   - persistent
   - persistent-template
   - persistent-postgresql
   - persistent-sqlite
+  - wai
+  - warp
   - yesod
+  - yesod-core
 
 executables:
   todo-list-yesod-exe:

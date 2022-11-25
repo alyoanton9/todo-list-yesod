@@ -13,11 +13,12 @@ import Database.Persist.Postgresql
 import Network.HTTP.Types.Status
 import Yesod
 
+import Config
 import Entity
 
 -- Routes
 
-data TaskList = TaskList ConnectionPool
+data TaskList = TaskList Config
 
 mkYesod "TaskList" [parseRoutes|
 /api/task         TaskListR GET POST
@@ -61,8 +62,8 @@ instance YesodPersist TaskList where
   type YesodPersistBackend TaskList = SqlBackend
 
   runDB action = do
-    TaskList pool <- getYesod
-    runSqlPool action pool
+    TaskList config <- getYesod
+    runSqlPool action (configPool config)
 
 -- DB helpers
 
