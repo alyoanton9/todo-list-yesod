@@ -38,12 +38,11 @@ library:
   dependencies:
   - aeson
   - http-types
-  - katip
   - monad-logger
   - persistent
   - persistent-template
   - persistent-postgresql
-  - persistent-sqlite
+  - text
   - wai
   - warp
   - yesod
@@ -61,7 +60,9 @@ executables:
     - todo-list-yesod
     - monad-logger
     - persistent-postgresql
+    - warp
     - yesod
+    - yesod-core
 
 tests:
   todo-list-yesod-test:

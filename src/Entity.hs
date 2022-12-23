@@ -11,8 +11,6 @@
 {-# LANGUAGE MultiParamTypeClasses      #-}
 {-# LANGUAGE OverloadedStrings          #-}
 
--- TODO: rename to Model? Database?
-
 module Entity
   ( Task (..)
   , TaskId
@@ -24,11 +22,15 @@ import Data.Aeson
 import Database.Persist
 import Database.Persist.TH
 
+-- Task entity TH generator
+
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Task
     content String
     deriving Show
 |]
+
+-- Task instances
 
 instance ToJSON Task where
   toJSON task = object ["content" .= taskContent task]

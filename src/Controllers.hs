@@ -54,7 +54,7 @@ putTaskR taskId = do
   entityTask <- replaceEntityTask taskId task
   sendStatusJSON ok200 $ toJSON entityTask
 
--- Instances
+-- TaskList instances
 
 instance Yesod TaskList
 
@@ -65,7 +65,7 @@ instance YesodPersist TaskList where
     TaskList config <- getYesod
     runSqlPool action (configPool config)
 
--- DB helpers
+-- Database helpers
 
 getEntityTasks :: Handler [Entity Task]
 getEntityTasks = runDB $ selectList [] []
