@@ -2,7 +2,7 @@
 
 ## Intro
 
-Here you may find **TODO-list backend application** implemented with **Yesod**, web framework for Haskell.
+Here you may find **TODO-list backend application** implemented with [**Yesod**](https://www.yesodweb.com/), web framework for Haskell.
 
 It has basic **CRUD** operations, responds with **JSON** only, uses [**Persistent**](https://hackage.haskell.org/package/persistent) as a storage interface, and additionally implements a simple custom **logger middleware**.
 
@@ -14,7 +14,7 @@ This code complements the talk "How to Choose a Haskell Web Framework" I present
 
 [<img src="./assets/pictures/haskell-exchange-talk-banner.png" width="710"/>](image.png)
 
-In this talk, I show how some of Haskell web frameworks approach web development. In particular, there are 3 of them - Servant, Yesod and IHP.
+In this talk, I show how some of Haskell web tools approach web development. In particular, there are 3 of them — Servant, Yesod and IHP.
 
 There are also corresponding [Servant](https://github.com/alyoanton9/todo-list-servant) and [IHP](https://github.com/alyoanton9/todo-list-ihp) TODO-list implementations.
 
@@ -114,5 +114,5 @@ Migrating: CREATe TABLE "task"("id" SERIAL8  PRIMARY KEY UNIQUE,"content" VARCHA
 ...
 ```
 
-----
+---
 Hope you'll find it helpful :blue_heart:
